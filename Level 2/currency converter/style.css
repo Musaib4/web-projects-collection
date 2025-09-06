@@ -1,0 +1,96 @@
+body{
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: tan;
+}
+
+.container{
+    height: 80vmin;
+    width: 70vmin;
+    display: flex;
+    flex-direction: column;
+    border-radius: 12px;
+    border: 2rem;
+    background-color: beige;
+    color: #000;
+    
+}
+.heading{
+    margin-left: 15px;
+}
+#label{
+    display: flex;
+    flex-direction: column;
+    margin: 20px ;
+}
+.amt2{
+    border-radius:10px;
+    padding: 15px;
+    outline: none;
+    border: 1px solid black;
+}
+.convert{
+    display: flex;
+    align-items: center;  /* arrow centers perfectly */
+    justify-content: space-between;
+    margin-top: 3px;
+}
+.from{
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+}
+#fr{
+    padding: 10px;
+    border-radius: 5px;
+}
+.to{
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+}
+#too{
+    padding: 10px;
+    border-radius: 5px;
+}
+.arrow{
+    font-size: 30px;
+    margin-top: 19px;
+    margin-left: 60px;
+    margin-right: 50px;
+}
+.button{
+    margin: 10px 80px 10px 80px;
+    padding: 15px 10px;
+    border-radius: 10px;
+    font-size: 20px;
+    background-color: blueviolet;
+    color: white;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+.result{
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+#converted{
+    border-radius:10px;
+    padding: 20px;
+    outline: none;
+    border: 1px solid black;
+    justify-content: center;
+}
+select {
+  width: 80px;      /* make enough space */
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  background-color: white;
+  color: #333;
+}

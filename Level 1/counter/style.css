@@ -1,0 +1,46 @@
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#inp{
+    font-size: 200PX;
+}
+.btns{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.inc{
+    margin-right: 10px;
+    padding: 5px;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid;
+    background-color: black;
+    color: floralwhite;
+    cursor: pointer;
+}
+.dec{
+    margin-right: 10px;
+    padding: 5px;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid;
+    background-color: black;
+    color: floralwhite;
+    cursor: pointer;
+    transition: 0.3s
+}
+.res{
+    margin-right: 10px;
+    padding: 5px;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid;
+    background-color: black;
+    color: floralwhite;
+    cursor: pointer;
+}

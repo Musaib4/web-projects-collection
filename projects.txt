@@ -1,0 +1,15 @@
+🟢 Level 1 – Micro Projects 
+
+✅ Counter (Increase/Decrease/Reset button)
+✅ Background Color Changer (click button → change page color randomly)
+✅ Character Counter (textarea + show how many chars typed)
+✅ Digital Clock
+✅ Tip Calculator
+
+🟡 Level 2 – Small Apps 
+
+✅ To-Do List (add, delete, mark complete)
+✅ Weather App (fetch from OpenWeather API)
+✅ Quiz App (questions + score tracking)
+✅ Currency Converter 
+

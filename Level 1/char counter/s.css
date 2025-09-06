@@ -1,0 +1,18 @@
+body{
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    color: white;
+}
+.area{
+    font-size: 50px;
+}
+.live{
+    font-size: 50px;
+}
+.rem{
+    font-size: 30px;
+}

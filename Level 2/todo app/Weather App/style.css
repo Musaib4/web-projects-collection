@@ -1,0 +1,74 @@
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: darkcyan;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    background-color: skyblue;
+    width: 80vh;
+    height: 80vh;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 10px;
+    padding: 20px; /* some breathing space */
+}
+.btn{
+    padding: 16px 8px;
+    width: auto;
+    font-size: 14px;
+    align-self: center;
+    cursor: pointer;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid;
+    background-color: yellow;
+    color: black;
+}
+.btn:hover{
+    background-color: rgb(47, 180, 140);
+}
+#inp{
+    padding: 10px;        /* equal padding all sides */
+    margin-bottom: 10px;
+    width: 200px;         /* or 100% if you want it full width */
+    box-sizing: border-box;
+    outline: none;
+    border: 2px solid;
+    border-radius: 5px;
+}
+.style{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: lightgray;
+    width: 50vh;
+    height: 50vh;
+    border-radius: 5px;
+    align-items: center;
+    font-size: 27px;
+}
+.section{
+    gap: 2px; /* space between input and button */
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+
+}
+.loader{
+    border: 6px solid #f3f3f3; /* light grey */
+    border-top: 6px solid #3498db;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    display: none;  
+    margin: 20px auto;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

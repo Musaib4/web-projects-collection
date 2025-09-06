@@ -1,0 +1,137 @@
+body{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    height: 84vh;
+    width: 80vh;
+    background-color: cadetblue;
+    padding: 30px;
+}
+.btn {
+    padding: 20px 20px;
+    width: auto;
+    font-size: 14px;
+    align-self: center;
+    cursor: pointer;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid;
+    background-color: #000;
+    color: #fff;
+    margin-top: 20px;   /* keep only small gap */
+}
+.btn1{
+    padding: 20px 20px;
+    width: auto;
+    font-size: 14px;
+    align-self: center;
+    cursor: pointer;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid;
+    background-color: #000;
+    color: #fff;
+    margin-top:20px ;
+    margin-left: 25vh;
+}
+
+.style{
+    width: 70vh;
+    height: 6vh;
+    margin-bottom: 10px;
+}
+.label{
+    margin-top: 20px;
+    display: flex;
+    text-align: right;
+}
+.dropdown{
+    display: none;
+}
+.mcq{
+display: flex;
+flex-direction: column;
+margin: 10PX 10PX;
+}
+.options{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+.option{
+    margin-bottom: 10px;
+    padding: 20px 15px;
+    overflow-wrap: break-word;
+    background-color: antiquewhite;
+    outline: none;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 18px;
+}
+.option:hover{
+    background-color: aqua;
+}
+.btn2{
+    padding: 20px 20px;
+    width: auto;
+    font-size: 14px;
+    align-self: center;
+    cursor: pointer;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid;
+    background-color: #000;
+    color: #fff;
+    margin-top:10px;
+}
+.btn2:hover{
+    background-color: crimson;
+}
+.hidden{
+    display: none;
+}
+.hide{
+    display: none;
+}
+.correct{
+    background-color: green;
+    color: black;
+}
+.wrong{
+    background-color: red;
+    color: black;
+}
+
+.live{
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+}
+.result{
+    display: flex;
+    margin-top: 35vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    color: midnightblue;
+}
+.reset{
+    padding: 10px 25px;
+    width: auto;
+    font-size: 19px;
+    align-self: center;
+    cursor: pointer;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid;
+    background-color: #000;
+    color: #fff;
+    margin-top:10px;
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QUIZ APP</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="dropdown">
+            <label for="Quest" class="label" style="margin-top: 60px;">Select Number Of Questions: </label>
+            <select name="Questions" id="ques" class="style">
+                <option value="5">5</option>
+                <option value="10">10</option>
+                <option value="15">15</option>
+                <option value="20">20</option>
+                <option value="25">25</option>
+            </select>
+
+            <label for="Quest" class="label" >Select Category:</label>
+            <select name="Category" id="cat" class="style"></select>
+
+            <label for="Difficulty" class="label">Select Difficulty:</label>
+            <select name="Difficulty" id="dif" class="style">
+                <option value="easy">Easy</option>
+                <option value="medium" selected>Medium</option>
+                <option value="hard">Hard</option>
+            </select>
+
+            <label for="TYPE" class="label">Select Type:</label>
+            <select name="Type" id="typ" class="style">
+                <option value="boolean">True/False</option>
+                <option value="multiple">MCQ</option>
+            </select>
+
+            <input type="button" value="Start Quiz" class="btn1">
+
+        </div>
+        <div class="mcq hide" > 
+            <span class="live"></span>
+                <h2 class="heading"></h2>
+                <div class="options">
+                </div>
+
+            <input type="button" value="next Question" class="btn2">
+        </div>
+        <div class="result hide">
+            <span class="last"></span>
+            <span class="score"></span>
+            <input type="button" value="reset" class="reset">
+        </div>
+    <input type="button" value="Start Quiz" class="btn">
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+body{
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+.btn{
+    padding: 20px;
+    border-radius: 10px;
+    outline: none;
+    border: 1px solid;
+    background-color: aqua;
+    color: black;
+}
+.container{
+    display: flex;
+}
+.box{
+    margin: 20px;
+    background-color: brown;
+    color: aliceblue;
+    padding: 30px;
+    border-radius: 10px;
+}
+.box2{
+     margin: 20px;
+    background-color: rgb(101, 179, 29);
+    color: #000;
+    padding: 30px;
+    border-radius: 10px;
+}
