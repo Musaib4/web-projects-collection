@@ -1,3 +1,5 @@
+* { box-sizing: border-box; }
+
 body{
     height: 100vh;
     display: flex;
@@ -40,7 +42,7 @@ body{
   margin: 15px; 
 }
 
-.input-wrapper input {
+.input-wrapper .input {
   width: 100%;
    padding-right: 40px; /*space so text doesn’t overlap button */
   height: 40px;
@@ -93,4 +95,71 @@ body{
   background: white;
   color: grey;
   font-weight: bold;
+}
+
+.para{
+  background-color: burlywood;
+  margin: 12px 20px;
+  padding: 12px;
+  border-radius: 6px;
+
+  /* layout: text on left, button on right */
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+/* THE KEY: allow the text flex child to shrink */
+.para .text {
+  flex: 1 1 auto;        /* allow it to grow/shrink */
+  min-width: 0;          /* <-- very important for wrapping inside flex */
+  white-space: normal;
+  word-wrap: break-word;
+  overflow-wrap: anywhere; /* breaks very long unbroken words/URLs */
+}
+
+/* delete button stays at right, doesn't stretch */
+.delete {
+  flex: 0 0 auto;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  padding: 0 6px;
+}
+
+.check {
+  appearance: none;          /* remove default checkbox */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  width: 30px;
+  height: 25px;
+  border: 2px solid #555;
+  border-radius: 4px;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  margin-right: 10px;        /* spacing from text */
+  background-color: white;
+  transition: all 0.2s ease;
+}
+
+.check:checked {
+  background-color: darkolivegreen;
+  border-color: darkolivegreen;
+}
+
+.check:checked::after {
+  content: "✔";
+  color: white;
+  font-size: 14px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.chkb{
+  text-decoration: line-through;
+  color: #444;
 }
