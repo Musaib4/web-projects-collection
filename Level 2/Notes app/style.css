@@ -163,3 +163,7 @@ body{
   text-decoration: line-through;
   color: #444;
 }
+.change{
+  background-color: black;
+  color: white;
+}
