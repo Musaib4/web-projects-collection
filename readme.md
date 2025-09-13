@@ -42,7 +42,7 @@ These projects involve **API usage, arrays, objects, and more advanced logic**:
 | **Weather App** | Fetch real-time weather data from OpenWeather API. |
 | **Quiz App** | Interactive quiz with multiple-choice questions and score tracking. |
 | **Currency Converter** | Convert currency using live exchange rates (API-based). |
-
+| **Notes App** | Add,Delete,clearAll,mark tasks complete,localStorage. |
 ---
 
 ## **📂 Folder Structure**
@@ -60,7 +60,8 @@ small-apps/
 ├─ todo-list/
 ├─ weather-app/
 ├─ quiz-app/
-└─ currency-converter/
+├─ currency-converter/
+└─ Notes App/
 
 
 Each project has its own folder with **HTML, CSS, and JS** files.
