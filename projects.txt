@@ -12,4 +12,4 @@
 ✅ Weather App (fetch from OpenWeather API)
 ✅ Quiz App (questions + score tracking)
 ✅ Currency Converter 
-
+✅ Notes App
