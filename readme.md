@@ -74,7 +74,7 @@ small-apps/
 
 medium-apps/
 |
-├─movie-search=app/
+├─movie-search-app/
 
 Each project has its own folder with **HTML, CSS, and JS** files.
 
