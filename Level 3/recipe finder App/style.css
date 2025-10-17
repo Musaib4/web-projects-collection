@@ -1,0 +1,168 @@
+html {
+  scroll-behavior: smooth;
+}
+
+
+body {
+  height: 100vh;
+  background-color: darkslategray;
+}
+
+@media (min-width: 1280px) {
+  .container {
+    margin: 0 auto; /* ✅ truly center container horizontally */
+    align-items: center;
+  }
+}
+
+.container {
+    display: flex;
+    flex-direction: column;   /* ✅ stack head and results vertically */
+    align-items: center;      /* ✅ center them horizontally */
+    min-height: 100vh;        /* ✅ use min-height instead of fixed height */
+    max-width: 1300px;
+    width: 100%;
+}
+
+.head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.heading{
+    /* font-size: 80px; */
+    font-size: clamp(2rem, 6vw, 80px);
+
+}
+.search {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background-color: white;
+  width: 100%;                /* ✅ flexible width */
+  max-width: 500px;          /* ✅ won’t stretch too wide */
+  height: 45px;
+  border-radius: 5px;
+  outline: none;
+  border: 2px solid gray;
+  margin-top: 20px;
+}
+
+.input {
+  flex: 1;
+  text-align: left;
+  border: none;
+  padding: 0 15px;
+  font-size: 1rem;
+  height: 100%;
+  outline: none;
+  min-width: 0;              /* ✅ helps prevent overflow in flex */
+}
+
+.search-btn {
+  border: none;
+  background-color: white;
+  font-size: 1.2rem;
+  padding: 0 15px;
+  cursor: pointer;
+}
+
+.small {
+  height: 220px;
+  width: 220px;
+  object-fit: cover; /* ✅ prevents distortion */
+  border: 4px solid white;
+  border-radius: 10px;
+}
+
+.res {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    justify-items: center;
+    gap: 40px; /* adds equal space between cards */
+    margin: 40px auto;  /* ✅ centers grid and adds top/bottom margin */
+    max-width: 1200px;  /* ✅ adds nice limit for big screens */
+    width: 100%;
+    padding: 0 20px;
+}
+
+
+.name {
+  text-align: center;
+  font-size: 18px;
+  font-family: sans-serif;
+  font-weight: bold;
+  margin: 10px 0;
+}
+.area {
+  text-align: center;
+  font-size: 16px;
+  font-family: sans-serif;
+  margin: 5px 0;
+}
+
+.showResult {
+  border: 4px solid white;
+  background-color: darksalmon;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  padding: 10px;
+  width: 100%;
+  max-width: 260px; /* keeps all cards same width */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between; /* ensures even spacing */
+  min-height: 420px; /* ✅ ensures all cards are equal height */
+  transition: transform 0.2s ease;
+}
+.showBtn{
+    width: 7rem;
+    height: 2rem;
+    background-color: darksalmon;
+    outline: none;
+    border-radius: 2px;
+    border: 1px solid black;
+    cursor: pointer;
+}
+.showBtn:hover{
+    transform: scale(1.03);
+    background-color: aliceblue;
+}
+
+@media (max-width: 480px) {
+  .heading {
+    font-size: 2.5rem; /* shrink title */
+    text-align: center;
+  }
+
+  .search {
+    width: 95%;
+    height: 40px;
+  }
+
+  .input {
+    font-size: 0.9rem;
+  }
+
+  .search-btn {
+    font-size: 1rem;
+    padding: 0 10px;
+  }
+}
+@media (max-width: 600px) {
+
+  .res {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    padding: 0; /* ✅ remove side padding for true centering */
+    width: 95vw; /* ✅ span full viewport width */
+    gap: 20px;
+  }
+
+  .showResult {
+    max-width: 90%; /* ✅ card takes most of the screen, nicely centered */
+  }
+}
