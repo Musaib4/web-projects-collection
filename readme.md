@@ -9,6 +9,8 @@ These projects focus on **DOM manipulation, events, API integration, arrays, obj
 
 - [Level 1 – Micro Projects](#-level-1--micro-projects-)
 - [Level 2 – Small Apps](#-level-2--small-apps-)
+- [Level 3 – Medium Apps](#-level-3--medium-apps-)
+
 - [Folder Structure](#-folder-structure)
 - [Tech Stack](#-tech-stack)
 - [How to Run](#-how-to-run)
@@ -43,6 +45,13 @@ These projects involve **API usage, arrays, objects, and more advanced logic**:
 | **Quiz App** | Interactive quiz with multiple-choice questions and score tracking. |
 | **Currency Converter** | Convert currency using live exchange rates (API-based). |
 | **Notes App** | Add,Delete,clearAll,mark tasks complete,localStorage. |
+
+---
+
+| Project | Description |
+|---------|-------------|
+| **Movie Search App** | Add fetch, render movies, style cards, and handle no results. |
+
 ---
 
 ## **📂 Folder Structure**
@@ -63,6 +72,9 @@ small-apps/
 ├─ currency-converter/
 └─ Notes App/
 
+medium-apps/
+|
+├─movie-search-app/
 
 Each project has its own folder with **HTML, CSS, and JS** files.
 
