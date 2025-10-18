@@ -65,6 +65,7 @@ async function fetchMealDetails() {
     link.href = data.meals[0].strYoutube
     link.innerText = 'click to watch video'
     link.target = '_blank'
+    link.classList.add('videoLink')
     show.append(link)
 }
 

@@ -5,7 +5,7 @@ html {
 
 body {
   height: 100vh;
-  background-color: darkslategray;
+  background-color: lightcyan;
 }
 
 @media (min-width: 1280px) {
@@ -34,7 +34,7 @@ body {
 .heading{
     /* font-size: 80px; */
     font-size: clamp(2rem, 6vw, 80px);
-
+    text-align: center;
 }
 .search {
   display: flex;
@@ -132,39 +132,10 @@ body {
     background-color: aliceblue;
 }
 
-@media (max-width: 480px) {
-  .heading {
-    font-size: 2.5rem; /* shrink title */
-    text-align: center;
-  }
 
-  .search {
-    width: 95%;
-    height: 40px;
-  }
 
-  .input {
-    font-size: 0.9rem;
-  }
-
-  .search-btn {
-    font-size: 1rem;
-    padding: 0 10px;
-  }
-}
-@media (max-width: 600px) {
-
-  .res {
-    grid-template-columns: 1fr;
-    justify-items: center;
-    padding: 0; /* ✅ remove side padding for true centering */
-    width: 95vw; /* ✅ span full viewport width */
-    gap: 20px;
-  }
-
-  .showResult {
-    max-width: 90%; /* ✅ card takes most of the screen, nicely centered */
-  }
+.dethead{
+  font-size: 80px;
 }
 
 .detimg{
@@ -188,5 +159,103 @@ body {
 
 .inst{
   font-size: 30px;
-  
+  font-style: oblique;
+}
+.videoLink {
+  color: #fff;              /* text color */
+  background-color: crimson; /* button-like look */
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;     /* remove underline */
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.videoLink:hover {
+  background-color: #ff4c4c;
+  color: black;
+}
+
+@media (max-width: 480px) {
+  .heading {
+    font-size: 2.5rem; /* shrink title */
+    text-align: center;
+  }
+
+  .search {
+    width: 95%;
+    height: 40px;
+  }
+
+  .input {
+    font-size: 0.9rem;
+  }
+
+  .search-btn {
+    font-size: 1rem;
+    padding: 0 10px;
+  }
+
+.inme{
+  display: flex;
+  gap: 10px;
+  justify-content: flex-start;
+  align-items: flex-start;
+  font-size: 25px;
+}
+.dethead{
+  font-size: 30px;
+}
+
+.inst{
+  font-size: 25px;
+  font-style: oblique;
+}
+
+.detimg{
+  height: 250px;
+  width: 250px;
+  object-fit: cover; /* ✅ prevents distortion */
+  border: 4px solid black;
+  border-radius: 10px;
+}
+}
+
+@media (max-width: 650px) {
+
+.res {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    padding: 0; /* ✅ remove side padding for true centering */
+    width: 95vw; /* ✅ span full viewport width */
+    gap: 20px;
+}
+
+.showResult {
+    max-width: 90%; /* ✅ card takes most of the screen, nicely centered */
+}
+
+.inme{
+  display: flex;
+  gap: 10px;
+  justify-content: flex-start;
+  align-items: flex-start;
+  font-size: 30px;
+}
+.dethead{
+  font-size: 30px;
+}
+
+.inst{
+  font-size: 30px;
+  font-style: oblique;
+}
+
+.detimg{
+  height: 280px;
+  width: 280px;
+  object-fit: cover; /* ✅ prevents distortion */
+  border: 4px solid black;
+  border-radius: 10px;
+}
 }
