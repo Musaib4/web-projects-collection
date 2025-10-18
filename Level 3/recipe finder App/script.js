@@ -38,6 +38,9 @@ async function apiKey(meals) {
         let btn = document.createElement('button')
         btn.innerText = 'view Recipe'
         btn.classList.add('showBtn')
+        btn.addEventListener('click',()=>{
+             window.location.href = `details.html?id=${meal.idMeal}`;
+        })
 
         main.append(imageElement)
         main.append(name)
@@ -50,3 +53,4 @@ async function apiKey(meals) {
     }
     console.log(response)
 }
+
