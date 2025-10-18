@@ -1,7 +1,7 @@
-# Micro & Small Web Projects
+# Micro, Small & Intermediate Web Projects
 
-This repository contains a collection of **Level 1 (Micro Projects)** and **Level 2 (Small Apps)** built using **HTML, CSS, and JavaScript**.  
-These projects focus on **DOM manipulation, events, API integration, arrays, objects, and basic logic**.  
+This repository contains a collection of **Level 1 (Micro Projects)**, **Level 2 (Small Apps)**, and **Level 3 (Intermediate Projects)** built using **HTML, CSS, and JavaScript**.  
+These projects focus on **DOM manipulation, events, API integration, arrays, objects, and advanced logic**.
 
 ---
 
@@ -51,7 +51,7 @@ These projects involve **API usage, arrays, objects, and more advanced logic**:
 | Project | Description |
 |---------|-------------|
 | **Movie Search App** | Add fetch, render movies, style cards, and handle no results. |
-
+| Recipe Finder App | Search meals using TheMealDB API, view ingredients, instructions, and YouTube videos. Fully responsive with clean UI. |
 ---
 
 ## **📂 Folder Structure**
@@ -75,6 +75,7 @@ small-apps/
 medium-apps/
 |
 ├─movie-search-app/
+├─Recipe-finder-app/
 
 Each project has its own folder with **HTML, CSS, and JS** files.
 
