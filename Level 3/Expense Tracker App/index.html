@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 class="title">Expense Tracker</h1>
+    <div class="container">
+        <p class="ae">Add Expense</p>
+        <input type="text" placeholder="Name" class="name">
+        <input type="number" placeholder="Amount" class="amount">
+        <select id="category" >
+            <option value="" disabled selected hidden >Select a category</option>
+        </select>
+        <input type="date" id="date"  min="1900-01-01">
+
+        <button class="btn">Add</button>
+    </div>
+    <script src="script.js" ></script>
+</body>
+</html>
