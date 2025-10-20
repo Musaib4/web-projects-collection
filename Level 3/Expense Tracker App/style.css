@@ -46,8 +46,11 @@ body{
     height: 7vh;
     width: 60vw;
     border: 1px solid gray;
-    color: gray;
+    color: black;
     border-radius: 5px;
+}
+#category option {
+    color: black;
 }
 #date{
     height: 7vh;
@@ -80,6 +83,70 @@ input, select {
 }
 
 
-#category option {
-    color: black;
+.show{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.table {
+    width: 80%;               /* total table width */
+    border-collapse: collapse;
+    table-layout: fixed;       /* fixes column widths */
+}
+
+.table th, .table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+    word-wrap: break-word;    /* wrap long text inside cells */
+}
+
+/* Optional: evenly distribute column widths */
+.table th, .table td {
+    width: 20%;               /* since you have 5 columns, each ~20% */
+}
+
+.delete, .edit {
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 5px 10px;
+    font-size: 16px;
+    transition: all 0.2s ease;
+}
+
+/* Delete button red */
+.delete {
+    background-color: #e74c3c;
+    color: white;
+    margin-right: 5vw;
+    margin-left: 2vw;
+}
+.delete:hover {
+    background-color: #c0392b;
+}
+
+/* Edit button blue */
+.edit {
+    background-color: #3498db;
+    color: white;
+}
+.edit:hover {
+    background-color: #2980b9;
+}
+.summary{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+}
+.exp{
+    font-size: 40px;
+}
+.spent{
+    font-size: 30px;
 }

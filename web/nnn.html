@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Phone Reveal Button</title>
+<style>
+  :root {
+    --primary-color: #f9423a;
+    --secondary-color: #003d71;
+    --white: #fff;
+    --border-radius: 8px;
+    --font-family: "DM Sans", sans-serif;
+  }
+
+  body {
+    font-family: var(--font-family);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #f4f6f8;
+  }
+
+  .phone-container {
+    text-align: center;
+    background-color: var(--white);
+    padding: 3rem 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: 0 8px 24px rgba(0, 61, 113, 0.1);
+    max-width: 400px;
+    width: 100%;
+  }
+
+  .phone-btn {
+    padding: 1rem 2rem;
+    font-size: 1.6rem;
+    background: linear-gradient(to right, var(--primary-color) 0%, #f77f00 50%, var(--primary-color) 100%);
+    color: var(--white);
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+
+  .phone-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+  }
+
+  .phone-number {
+    display: none;
+    margin-top: 1.5rem;
+    font-size: 1.6rem;
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+  }
+
+  .phone-number:hover {
+    color: var(--primary-color);
+  }
+
+  .phone-number::before {
+    content: "📞 ";
+  }
+</style>
+</head>
+<body>
+
+<div class="phone-container">
+  <button class="phone-btn" id="revealBtn">Show Phone Number</button>
+  <a href="tel:+1234567890" class="phone-number" id="phoneNumber">+1 234 567 890</a>
+</div>
+
+<script>
+  const revealBtn = document.getElementById('revealBtn');
+  const phoneNumber = document.getElementById('phoneNumber');
+
+  revealBtn.addEventListener('click', () => {
+    phoneNumber.style.display = 'inline-block'; // show the number
+    revealBtn.style.display = 'none'; // hide button
+  });
+</script>
+
+</body>
+</html>
+
+

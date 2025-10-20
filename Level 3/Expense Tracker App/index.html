@@ -13,11 +13,31 @@
         <input type="text" placeholder="Name" class="name">
         <input type="number" placeholder="Amount" class="amount">
         <select id="category" >
-            <option value="" disabled selected hidden >Select a category</option>
+            <option value="0" disabled selected >Select a category</option>
+            <option value="1">Food & Dining</option>
+            <option value="2">Transport</option>
+            <option value="3">Housing</option>
+            <option value="4">Entertainment</option>
+            <option value="5">Health & Fitness</option>
+            <option value="6">Shopping</option>
+            <option value="7">Education</option>
+            <option value="8">Travel</option>
+            <option value="9">Bills & Subscriptions</option>
+            <option value="10">Others</option>
+            <option value="11">add custom category</option>
+
         </select>
         <input type="date" id="date"  min="1900-01-01">
 
         <button class="btn">Add</button>
+    </div>
+    <div class="summary">
+        <h2 class="exp"> Expense Summary</h2>
+        <p class="spent">Total Spent: <span id="total">0</span></p>
+    </div>
+    <div class="show">
+        <h1>Expense List</h1>
+
     </div>
     <script src="script.js" ></script>
 </body>
