@@ -1,0 +1,20 @@
+{
+  "name": "js-logic",
+  "version": "1.0.0",
+  "description": "This repository contains a collection of **Level 1 (Micro Projects)**, **Level 2 (Small Apps)**, and **Level 3 (Intermediate Projects)** built using **HTML, CSS, and JavaScript**.  \r These projects focus on **DOM manipulation, events, API integration, arrays, objects, and advanced logic**.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Musaib4/web-projects-collection.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Musaib4/web-projects-collection/issues"
+  },
+  "homepage": "https://github.com/Musaib4/web-projects-collection#readme"
+}

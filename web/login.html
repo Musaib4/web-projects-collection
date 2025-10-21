@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Auth System</title>
+<style>
+  body { font-family: "DM Sans", sans-serif; background-color: #edf4f7; display: flex; align-items: center; justify-content: center; height: 100vh; }
+  .auth-container { background: white; padding: 3rem; border-radius: 12px; box-shadow: 0 8px 24px rgba(0, 61, 113, 0.1); width: 350px; text-align: center; }
+  h2 { color: #003d71; margin-bottom: 1.5rem; }
+  input { width: 100%; padding: 1rem; margin: 0.5rem 0; border: 1px solid #ccc; border-radius: 6px; font-size: 1.2rem; }
+  button { background: linear-gradient(to right, #f9423a, #f77f00); color: white; border: none; border-radius: 50px; padding: 1rem 2rem; font-size: 1.2rem; font-weight: bold; cursor: pointer; transition: 0.3s; }
+  button:hover { background: #f77f00; }
+  .toggle { margin-top: 1rem; color: #003d71; cursor: pointer; text-decoration: underline; font-size: 1.1rem; }
+  .message { margin-top: 1rem; font-size: 1.2rem; font-weight: bold; }
+</style>
+</head>
+<body>
+
+<div class="auth-container" id="authContainer">
+  <h2>Sign In</h2>
+  <input type="text" id="fullName" placeholder="Full Name" style="display:none;">
+  <input type="text" id="username" placeholder="Username" style="display:none;">
+  <input type="email" id="email" placeholder="Email" required>
+  <input type="password" id="password" placeholder="Password" required>
+  <button id="authBtn">Sign In</button>
+  <div class="toggle" id="toggleForm">Don’t have an account? Sign Up</div>
+  <div class="message" id="message"></div>
+</div>
+
+<script>
+const container = document.getElementById('authContainer');
+const toggleForm = document.getElementById('toggleForm');
+const authBtn = document.getElementById('authBtn');
+const message = document.getElementById('message');
+const fullNameInput = document.getElementById('fullName');
+const usernameInput = document.getElementById('username');
+const emailInput = document.getElementById('email');
+const passwordInput = document.getElementById('password');
+
+let isSignIn = true;
+
+function validateEmail(email) {
+  const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return re.test(email);
+}
+function validatePassword(password) {
+  const re = /^(?=.*[A-Z])(?=.*\d).{8,}$/;
+  return re.test(password);
+}
+
+toggleForm.addEventListener('click', () => {
+  isSignIn = !isSignIn;
+  message.textContent = '';
+  fullNameInput.style.display = isSignIn ? 'none' : 'block';
+  usernameInput.style.display = isSignIn ? 'none' : 'block';
+  container.querySelector('h2').textContent = isSignIn ? 'Sign In' : 'Sign Up';
+  authBtn.textContent = isSignIn ? 'Sign In' : 'Sign Up';
+  toggleForm.textContent = isSignIn ? "Don’t have an account? Sign Up" : "Already have an account? Sign In";
+});
+
+authBtn.addEventListener('click', async () => {
+  const fullName = fullNameInput.value.trim();
+  const username = usernameInput.value.trim();
+  const email = emailInput.value.trim();
+  const password = passwordInput.value.trim();
+
+  if (!email || !password || (!isSignIn && (!fullName || !username))) {
+    message.style.color = 'red';
+    message.textContent = 'Please fill in all fields.';
+    return;
+  }
+
+  if (!validateEmail(email)) {
+    message.style.color = 'red';
+    message.textContent = 'Invalid email address.';
+    return;
+  }
+
+  if (!validatePassword(password)) {
+    message.style.color = 'red';
+    message.textContent = 'Password must be 8+ chars, include 1 uppercase and 1 number.';
+    return;
+  }
+
+  const url = isSignIn ? 'http://localhost:5000/login' : 'http://localhost:5000/signup';
+  const res = await fetch(url, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ fullName, username, email, password })
+  });
+
+  const data = await res.json();
+  message.style.color = data.success ? 'green' : 'red';
+  message.textContent = data.message;
+
+  if (data.token) localStorage.setItem('token', data.token);
+});
+</script>
+
+</body>
+</html>
